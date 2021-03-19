@@ -1,0 +1,45 @@
+{
+  "name": "react-tailwind-task",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "autoprefixer": "^10.2.5",
+    "clean-css-cli": "^5.2.2",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "tailwindcss": "^2.0.4",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "purge:css": "NODE_ENV=production tailwind build src/base.css -o src/index.css",
+    "build:css": "tailwind build src/base.css -o src/index.css",
+    "start": "npm run build:css && react-scripts start",
+    "build": "npm run purge:css && react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
